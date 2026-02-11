@@ -1,7 +1,4 @@
-permissions:
-contents: read
-pages: write
-id-token: writename: CD - Déploiement sur GitHub Pages
+name: CD - Déploiement sur GitHub Pages
 on:
  push:
  branches: [ "main" ]
