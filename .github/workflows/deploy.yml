@@ -12,15 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Récupération du code
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Apply desired state
-        run: |
-          chmod +x scripts/apply_state.sh
-          ./scripts/apply_state.sh
-
-      - name: Déploiement vers GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
